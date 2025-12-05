@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8B5CF6;
+  --color-background-light: #F3F4F6;
+  --color-background-dark: #11101d;
+
+  --font-display: "Poppins", "sans-serif";
+}
+
+@layer utilities {
+  .image-glow {
+    box-shadow: 0 0 40px 10px rgba(139, 92, 246, 0.4), 0 0 80px 20px rgba(139, 92, 246, 0.2);
+  }
+  .btn-glow {
+    box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.5);
+  }
+  .text-glow {
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(17, 16, 29, 0.95), rgba(17, 16, 29, 0.95)),
+    linear-gradient(to right, #4c51bf1a 1px, transparent 1px),
+    linear-gradient(to bottom, #4c51bf1a 1px, transparent 1px);
+  background-size: 100%, 100%, 40px 40px;
+}
+
+.dark body {
+  background-image:
+    linear-gradient(rgba(17, 16, 29, 0.95), rgba(17, 16, 29, 0.95)),
+    linear-gradient(to right, #4c51bf1a 1px, transparent 1px),
+    linear-gradient(to bottom, #4c51bf1a 1px, transparent 1px);
+}
+
+.light body {
+   background-image:
+    linear-gradient(rgba(243, 244, 246, 0.95), rgba(243, 244, 246, 0.95)),
+    linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+}

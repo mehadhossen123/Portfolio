@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Salman Hossain Portfolio Home</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B5CF6", // a vibrant purple
+                        "background-light": "#F3F4F6", // light gray for light mode
+                        "background-dark": "#11101d", // dark purple/blue from image
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem", // 8px
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        body {
+      background-image:
+        linear-gradient(rgba(17, 16, 29, 0.95), rgba(17, 16, 29, 0.95)),
+        linear-gradient(to right, #4c51bf1a 1px, transparent 1px),
+        linear-gradient(to bottom, #4c51bf1a 1px, transparent 1px);
+      background-size: 100%, 100%, 40px 40px;
+    }
+    .dark body {
+      background-image:
+        linear-gradient(rgba(17, 16, 29, 0.95), rgba(17, 16, 29, 0.95)),
+        linear-gradient(to right, #4c51bf1a 1px, transparent 1px),
+        linear-gradient(to bottom, #4c51bf1a 1px, transparent 1px);
+    }
+    .light body {
+       background-image:
+        linear-gradient(rgba(243, 244, 246, 0.95), rgba(243, 244, 246, 0.95)),
+        linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    }
+    .image-glow {
+      box-shadow: 0 0 40px 10px rgba(139, 92, 246, 0.4), 0 0 80px 20px rgba(139, 92, 246, 0.2);
+    }
+    .btn-glow {
+      box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.5);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased">
+    <div class="min-h-screen flex flex-col px-4 sm:px-6 lg:px-8">
+        <header class="py-6">
+            <nav class="container mx-auto max-w-7xl flex justify-between items-center">
+                <a class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white" href="#">
+                    <span class="text-primary">&lt;</span>Salman<span
+                        class="font-normal text-gray-500 dark:text-gray-400">/</span>Hossain<span
+                        class="text-primary">&gt;</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-primary font-semibold hover:text-primary/80 transition-colors" href="#">Home</a>
+                    <a class="hover:text-primary transition-colors" href="#">About</a>
+                    <a class="hover:text-primary transition-colors" href="#">Skills</a>
+                    <a class="hover:text-primary transition-colors" href="#">Projects</a>
+                    <a class="hover:text-primary transition-colors" href="#">Education</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a aria-label="GitHub" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                        href="#">
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.218.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .267.18.577.688.48A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a aria-label="LinkedIn"
+                        class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow container mx-auto max-w-7xl flex items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full py-12 md:py-24">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-4xl md:text-5xl font-semibold text-gray-700 dark:text-gray-300 mb-4">Hi, I am</h2>
+                    <h1 class="text-6xl md:text-8xl font-bold text-gray-900 dark:text-white mb-6">Salman Hossain</h1>
+                    <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-10">I am a <span
+                            class="text-primary font-semibold">UI Focused</span> Developer</p>
+                    <a class="inline-block bg-primary text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-primary/90 btn-glow transition-all duration-300 ease-in-out transform hover:scale-105"
+                        href="#">
+                        DOWNLOAD CV
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px]">
+                        <div class="absolute inset-0 rounded-full border-2 border-primary image-glow animate-pulse">
+                        </div>
+                        <img alt="A portrait of Salman Hossain in a dark room with blue fairy lights in the background."
+                            class="relative w-full h-full object-cover rounded-full"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGjZXYhpecEeLcxHWh5mLV01DrASKvccyW9JHrmEpHG5sZQ4Due-hxHxE7IEClWNJHfgNJ7RG3XZKw7mqmW44aDRJK_Z0j7xdaOeiXD_Fld-tOGNEGIwLAph1fEH6Fj2jPETXbKv8tKF8wk_KMhZBUJKqJOgI2kc6D4LUisM7X6q7iS1UqloQHFT3sorGi5R96srp-1jroMLokwLdx6LAfACUtDaoicx0sOJXptBrfaogqv0HcQKnq8fnyT7PmF_jL7qAGuQ9rfw4" />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- About section is here  -->
+    <div class="flex-grow container mx-auto max-w-7xl flex items-center justify-center py-12 md:py-24">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 w-full">
+            <div class="flex-shrink-0 lg:w-1/3 flex justify-center">
+                <div class="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px]">
+                    <div class="absolute inset-0 rounded-full border-2 border-primary image-glow"></div>
+                    <img alt="A portrait of Salman Hossain in a dark room with blue fairy lights in the background."
+                        class="relative w-full h-full object-cover rounded-full"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGjZXYhpecEeLcxHWh5mLV01DrASKvccyW9JHrmEpHG5sZQ4Due-hxHxE7IEClWNJHfgNJ7RG3XZKw7mqmW44aDRJK_Z0j7xdaOeiXD_Fld-tOGNEGIwLAph1fEH6Fj2jPETXbKv8tKF8wk_KMhZBUJKqJOgI2kc6D4LUisM7X6q7iS1UqloQHFT3sorGi5R96srp-1jroMLokwLdx6LAfACUtDaoicx0sOJXptBrfaogqv0HcQKnq8fnyT7PmF_jL7qAGuQ9rfw4" />
+                </div>
+            </div>
+            <div class="text-center lg:text-left lg:w-2/3">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">About <span class="text-primary text-glow">Me</span>
+                </h1>
+                <div class="space-y-6 text-lg text-gray-400 leading-relaxed">
+                    <p>
+                        Hello! I'm Salman Hossain, a passionate and detail-oriented developer with a keen eye for design
+                        and a love for creating intuitive, beautiful user interfaces. My journey into the world of
+                        programming began with a fascination for how technology can be used to create engaging and
+                        seamless digital experiences.
+                    </p>
+                    <p>
+                        With a strong foundation in front-end technologies, I specialize in crafting UI-focused
+                        applications that not only function flawlessly but also provide a delightful user experience. I
+                        believe that the best products are born from a perfect blend of robust code and thoughtful
+                        design.
+                    </p>
+                    <p>
+                        I'm constantly exploring new tools and techniques to push the boundaries of what's possible on
+                        the web. My goal is to leverage my skills to build innovative solutions that solve real-world
+                        problems and leave a lasting positive impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills section is he -->
+    <div class="container mx-auto max-w-6xl relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
+                SKILLS
+            </h2>
+            <div class="mt-2 flex justify-center">
+                <div class="w-20 h-1 bg-primary rounded-full"></div>
+            </div>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+                A collection of my technical skills and expertise honed through various projects and experiences
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+                class="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden">
+                <div
+                    class="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-white mb-6">Frontend</h3>
+                <div class="flex flex-wrap gap-4">
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="HTML5 icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS69D4OAx8WG_ibtIAFCkWz_G8wY6leA_t1Z2Q1qkBFsPgvZd0sy0SqraZfx6M_PAKsMjA5sTExlgETje6So2GXR3dgbFWSF2XKnoqIJAEDeppWEBFUVtwct7A1x5nOqzJHuEgL4G-mEouGbMH7soFaQrdQSmuJlR7PlW6H-Z74jUlECDkQ_uX4Jek5kcHYPPiGSf1h1CLb4gd3cXk2wzei-MqCHzrQx6q3M7lxSfdFFRBqHQMOCGFuuA9csB9XZ3_K-oFsM-wd1Q" />
+                        <span>HTML</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="CSS3 icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOZHmfiUvhm-eG1n-TpjVY6g9xc9ZGwq5kDlAprKCuSN1ftaF9ZEWV18hUGEDwxnKmUN3nb9ZIoFPEuddPeaWQjjvW3xgQR1PFfym9ZajMM84tM53IsTbpdNIwrI_9Q9JOX8dpUGfO0qswszDF0_FMz5mQn7169nDBrY7AgmTA1HZ_KM2s1cziNXsQH4FXMzFwdy9_DIqklOWIjG-C32hCFazaPdBHAv3kQUhamJ0NGSQHUAhgPgvNuQOjIBsX6wiRrvSEnv4A8hI" />
+                        <span>CSS</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="JavaScript icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYfqbcAamKK1k1DcHKlTIIgVbU9p2lIRTWWVQFTC7x2r1MFQhNDMgK5F_7QkDtw0XuPnJji_DnFs2b0969SfRtBayHiig6le-Xjp9HQ1dK4Wv4TtMVl1XMDxXONJGMK8eQKPXgIuNSv6lfHXfPvp-kHXWjkgpR4J8TFykU1LWU-5CBVdA9QIEm4XAo0HFGhJEGLr8YczrVLqm0w0LVcrFPyaQ_rWF2BIx-RYYa3n5FKlh4Qtv95eoa-qk--NZCSDzI_FPq1_5GST4" />
+                        <span>JavaScript</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="React JS icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjZHkH9gXy7aRWzU8Bn95oqKv62Z9bssS8dFAL2XQ8j2fTNfGW4A87GHUYg7hBI6OvM9MEpDfE99AJVBWemE07v52yBronuYSZbSPp5mopdBsGE0w-iboZeCOdJIBr-bynrU1YdN37r76OiPcal8vDQCyAo3k20mMUIJbRLrFNWQzT5dgADEgKQUMMfgLxoSXcO1UcGkD3mQvgEKGjZmAKv7X42w3ppLTKqypI59Qd1qm4uXDTYbQKTXnHvr3Qn0ZaSq1MKN62Cg4" />
+                        <span>React JS</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Tailwind CSS icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-yEdDsJysX3G78biskYzNjLU0HYjzC1UqADj0reLloJl9Tj3n8jLBwq6rusz9h40Tk53eoqCQKLjHGuVCglHVlFAlAJLme3Mvy5PgTJsz7J0vLDwA8RMGL4klyjUdpQPqoFkQoDrIs179GdLwama9lM_TQr2RvEfisN6A9t_4fatxsEjOa8y9lOoUEEbMmAkYAhiKBStQN2d2a4QOn1NAYzLYCAGKzCwY89ElCnVFzMlB4BGyiCQSaBqkEC1VSWTB3zkCO9K4g7k" />
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden">
+                <div
+                    class="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-white mb-6">Backend</h3>
+                <div class="flex flex-wrap gap-4">
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Node JS icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqALwgSuznH04ceiKTQf_AdoNMkA0hPN2SYwofUbSKRYsvYKRQ8Eww4193a2d2Ss_hapU8GzwcJGbt3oVtTCJT8emjjLpzUbp0OFh-oe7FC2CHyqwIM7CWAweYRswKv4VHtFkWP5Qj5RHBup-_uto3K_sg3j_TT55ueN5yydUgKYlQFrCscTJxq9ENoTWdP915NrMdS7ylPlseV08ojn1SJ6pvlR0N0Y2H2_wX0EHj99WkfuVqNKQ-2hzb_IvCneWfmzQpUZfHWOw" />
+                        <span>Node JS</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Express JS icon" class="w-5 h-5 invert dark:invert-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJgMrDvWf-twsI6To6WntFFlimdBfzcgka7q2oBmmbwoUL4TwF8eat22sbp22jJZWHUUMiWMiHNoTXVsOLC13Ay5t8QgXrIhetSq8xudMoaqUtxZIzURYa4FpP9tSZtCzZQnva5s-cMZLbaAFZMY6dpt_QGsajshwPKhp18p3yZ7N9DtvWBRhX34dWmIJuFYOhaBr7p63IwGXf-oipmdfjSKR4WzxowQ0N3hj7ZPiVC1RKg7idAUGYPQlY8StY6NliLftVND-VZ-U" />
+                        <span>Express JS</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="MongoDB icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbt2y5Y99EVwKCtuAaKipsKco5in-oVdb6Vx-ijz9tEweNR3sTHerAgVixuC4s4oQRHakqYQUFymmMVbbISb1BwQA75C_GHlEo_RtcybRAYagk1zDTAJJa8tJvTEfh3zBfiWnC70-HX1BoyK19QfTIhq2FWNY1BcPqU6Oy0K88GWGoEFAfyU6mPqczP9AhDnCQusHYgkSaV5tLRZwbIYeQ6Q8W72XJzy5gPTKIjFKNpctxBIQMxFW51saVsDma2OgQJVgxydheLRE" />
+                        <span>MongoDB</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Firebase icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOpP2Oi1Q4O0PiwAIWlEqaEXzqx7yssoEjuLivszh61dVCkOkAI-ew7D7F0SXUCKbG6cBObThZdI32-QfJB1NPBGd5hld-GyFskXIcQZ81AzFcrPDz4sP7MZ4Qqa70MJg2-a5vB_bf2V7HRK8lI9gISSSR_UyckamiX3PztERcbk8eZHmUqOvgxmO1P6VvHIvamDONtbxh9hi7yGRXZ_iZxa-v5vKHopSon4M8le6BfB2AfwKRCnomnz_9B8DBeITiiVD2lCO8vhk" />
+                        <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden">
+                <div
+                    class="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-white mb-6">Languages</h3>
+                <div class="flex flex-wrap gap-4">
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="JavaScript icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkKnBd0WSA3VR3SDrC48PjA3_uAYxNcWotzLBAsWbClwMSeqOOnohLuF7Yc7maCKE0F93pMdO7pw6OffIRMXiNSNLzUJzqY40dyfiGs_0xBgBfoRWw_PikRkETrP_Wygc-1Ng7VscQoj2XxSMXL5cbW_mrHRFixMsywJZ4WroBw46avr-X3Us9NFqErU6ACmmzWBFZ88KL3kbhNWEQb14wW9LFlHP1P7wWtfyNY1ZEWRESIicHVc3hy_egzNXunmlpgfVR07zRLoE" />
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden">
+                <div
+                    class="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-white mb-6">Tools</h3>
+                <div class="flex flex-wrap gap-4">
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Git icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZABY3mW32GaLu1souy4i1wnRghdoNAa9m9Dj5_Ecw9jLTgeU8MjtZZMDjNNEoyUfaqZX1HfJY1MMGAQOzf3SZHfsOJTM2dSw9WRL5kwZFzj7q7gdm_5m3YH6y_yftSv-uN9G8dQY973pNoMYltrHE0CORokbh7itlk_QeKCAuviUprwiJdvxPV9Mc2qoteqhBLY_n--Gyz_I8deDiBIs3NtQ-Tc66hWITHOejviiNA2j6XEZRLgxxncUM9bVZd8xfDHmHJyzdc4" />
+                        <span>Git</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="GitHub icon" class="w-5 h-5 invert dark:invert-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyC5-Oyvcl9VdjvkWeRuKpF-HaJgZNkC1QohxdtfFxbn7QaRl49WaYfX5nID69sC7keS11klikyk3PKDplLIGpi8o5-PgZPJeMask9IhEzrAa80Km5bkDeMYom0_eNgTur9stCHE4eeg2EoHa25IVnRFGn5Qf8bmig9eNF1zLfbRRmYDo6OlV_dLRUuLKVHgycGB_KK5QvXW9bPGHgQMwUoLO_aDn0sTWoWtlFWst5ReI5Ygo_z7JwSIkIR4rNoySJfUA3RJ5jZMg" />
+                        <span>GitHub</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="VS Code icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgON7eAk8rXe5KVIF1wj3pUhPErS9ldGYFNwowYglG7hko4KmjBTxRhbq9aRuaEOoMXYiJJ9q8f8tx-4fy-fB8qjHeC4WVN11DQwjPZA-BGCUuta4CBS5YzbZkA5R72S_iFdZ3SabTUlgTugidH_axlgu-SCdkLHLyRQeA88V1B8N7QZdoU8N6__ahIGAUT4db88ge-acPMLov82yxpzP1j6Dvi7L2CwdDah3bSHK5Lv7Sj4JoJ3G_I45tl-ZLK8jrTHpsF-RYAdQ" />
+                        <span>VS Code</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Thunder Client icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8p3UWcAGW50dR7WC5nm2sGHkL_U8rof1Hmofy92z8yZ4yXPyT8e_RQoEAumC2he3R2kyeB8mFz2VjQ_-uYQHyawUh_BRF9XNzIKHbLiwAqXRd-iE5TrBqLSB2Y9BJ_jsQcMN7h2f_xlO8X5DbjP6_rkmEbV-k4A0uLRtmzo3PlQTbk4E67O7BDVznrSJk355Bv0bGGxgVDwAI3R96JsHOQllXr5c3fsgw-bjfzqzNYVe_G0Mwl_EB9s6INWFXYQbsevgBOQQqxRE" />
+                        <span>Thunder Client</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Vercel icon" class="w-5 h-5 invert dark:invert-0"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoUG8ewHh-DXLxniZrrQ_WR9ZufqXItBZ300b0Z8G-hh7UMDmPIHc9ILi8A7jm-YknA_7kAiiorSwrHRdjcy56-tExh90Uhu7PA5_aSuzaGsoVXBCQ1niX5Gdk4fSHfE77aueqiFqD5vvvZouvQMUNx0PDtvW81v4qxjxjgOz9wmdvYv_Qe4g82cX7HlzRs9DEHkE4bL4FSqIyOby_9gWnSX2y7hyRE8fhE-Y9y7mjYJ3_JhFlc0C6ietYXoIC_Su9HSz_W7UT7U0" />
+                        <span>Vercel</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Netlify icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhoPrqIdxIPRcCGcjzyV5BMzcIlLeqJj1oI3ydXXSta_t1V1NkblArgV_W_yO8SdVxxsd8D20cK6fO4iTgYiiJJ7ewILky56r05H0hoRzKz1y8uS8g9V_v71i6j-JocYwLnu1GtMWnGXMsWtetOLo2SXtemNdXrE3vgXRnTTSdBI8XTBcAgdcJZ5H1TvFpnMLLwLYN041lG13p6wjf0bOtuuAbo3d3e8lTsPMpIyhPmy3KddcVTjX-AUpCgo7-lPtHyk5YR9UnuI" />
+                        <span>Netlify</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
+                        <img alt="Figma icon" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYYkYrXCyt8aIiXcnXjQqybRwlYsaVo263G5KaDMiQjzfnIM9CvM-LrJ-yeieirm9U1OekWtRhzD6gsEtm-61otursNKjRGnlDSrygCxga7qSNBFDCqoosR5PdEltc-OaYqi_4FLUkT9FSmEZJYWtgtAZeDdm94xedTDgXoHd8tAwU0wcPD-eyT8X8QxKVApf50r7ySYudKkRyykMAOcDeYnv22__CKxOVxY3C_9UKp0A2ba-n5xl8Zkxtxep_tLB0ERjXe-0s2_4" />
+                        <span>Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- project section is -->
+    <div class="container mx-auto px-4 py-16 sm:py-24">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+                PROJECTS
+            </h1>
+            <div class="inline-block w-20 h-1.5 bg-primary rounded-full"></div>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                A showcase of the projects I have worked on, highlighting my skills and experience in various
+                technologies
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12">
+            <div
+                class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-6 flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-primary/10">
+                <div class="mb-6 overflow-hidden rounded-md">
+                    <img alt="Screenshot of 'The Book Haven' project, a digital library interface."
+                        class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPLmTB4neNV7ItC1JoGeLTzIUzvhl7AANXSCshYb8tL8FtoNuDh-XPk_Q-Xm2cy4vJG7C8tadG80Jo78AuPMbo2nbKUux0fCWMc7xi7aXERaBa9UeHxXyhDtXLYbqiN1IjLQ-FwWNbeMg0oBUgOo1Yv4xjHu5A0DTv0pbbm7jelFxcqvwqLIdpPJKkj39t6erMQ71etC0ENFKyYQ4biLwJWZB_VKltvYAvSMGZa1umWK7ag5E8v6mOPKfnuiqTzHkeDD2RHtC7vAI" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">The Book Haven</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
+                        The Book Haven is a MERN Stack online bookstore with a clean UI, secure authentication,
+                        role-based access, and a fast, scalable backend for smooth book browsing, cart management,
+                        and...
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">React
+                            JS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">Firebase</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">MongoDB</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">Express</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-6 flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-primary/10">
+                <div class="mb-6 overflow-hidden rounded-md">
+                    <img alt="Screenshot of 'Toy Topia' project, a colorful online toy shop."
+                        class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl8DtV6sS12B8-RAH_mNx4X59IEL3KH_2kbPkIt-jJNkIRw2Ey3jLUmFm-MSe9mI9ufK72Zd5LUfjNvjjWgUE02WiBQ2VhE12l0hf4NX3Lk87H2VYU1E4Q9C4r7HhQSViZRTXCNoAbPkeqgDPkir574oUg85IQRwir6fL-qkZW2QjrBbYcdpWgfF7rCS4LKwOOgn14BbRv9CvaqmV7NYVlWWxvf5LcJMxZP8QAPRFtCYie7wjVhSyRToKXL0o_rCA5qJtS5KE8Tdg" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Toy Topia</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
+                        Toy Topia is a React-based toy marketplace featuring a clean and responsive UI that allows users
+                        to browse toys, view details, and interact with an intuitive shopping experience. Built with...
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">React
+                            JS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">API</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">Firebase</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-6 flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-primary/10">
+                <div class="mb-6 overflow-hidden rounded-md">
+                    <img alt="Screenshot of 'The Dragon News' project, a clean news aggregator website."
+                        class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSraKTOUAcZWRSAdKK1qzFX1X_1kmjm3tKgtehpvMsfaWVVo_hTERLbTmv5y0ha9fI2MEJ0rVvXwbjfApAIDkCnU5rP0Cg3t41Dgg2siyx53XWCL-sZWcMaFD3thCcM9DQToV6XIeYj0hZm1lXBNhQPx6bF-fpi-JF1-zBh6-hK1-VRDCb9uWTbBHCc4Ap6AAuN_GszG9wSQ-GZ-A-zBwkH9gDXjM8xgtwAEWj0WDiY3dYYtMJzoAXIKrwRBmmuaOCuaxf03FV38A" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">The Dragon News</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
+                        Dragon News is a React-based news platform that delivers real-time articles through a clean,
+                        modern, and responsive interface. Users can browse categories, read detailed news stories,
+                        and...
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">React
+                            JS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">API</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        <span
+                            class="bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Education part is here  -->
+    <div class="container mx-auto px-4 py-16 sm:py-24">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+                EDUCATION
+            </h1>
+            <div class="inline-block w-20 h-1.5 bg-primary rounded-full"></div>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                My academic background and qualifications.
+            </p>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="relative pl-8 sm:pl-12 py-4 group">
+                <div
+                    class="absolute left-2 sm:left-4 top-0 h-full w-0.5 bg-gray-200/20 dark:bg-white/10 group-hover:bg-primary/50 transition-colors duration-300">
+                </div>
+                <div
+                    class="absolute left-0 sm:left-1.5 top-5 -ml-2.5 w-5 h-5 bg-background-dark border-2 border-gray-200/30 dark:border-white/20 rounded-full group-hover:border-primary transition-colors duration-300">
+                </div>
+                <div
+                    class="p-6 bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg hover:border-primary/50 hover:shadow-primary/10 transition-all duration-300">
+                    <p class="text-sm font-medium text-primary mb-1">2023 - Present</p>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">B.Sc in Computer Science &amp;
+                        Engineering</h2>
+                    <p class="text-gray-500 dark:text-gray-400">International Standard University, Dhaka</p>
+                </div>
+            </div>
+            <div class="relative pl-8 sm:pl-12 py-4 group">
+                <div
+                    class="absolute left-2 sm:left-4 top-0 h-full w-0.5 bg-gray-200/20 dark:bg-white/10 group-hover:bg-primary/50 transition-colors duration-300">
+                </div>
+                <div
+                    class="absolute left-0 sm:left-1.5 top-5 -ml-2.5 w-5 h-5 bg-background-dark border-2 border-gray-200/30 dark:border-white/20 rounded-full group-hover:border-primary transition-colors duration-300">
+                </div>
+                <div
+                    class="p-6 bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg hover:border-primary/50 hover:shadow-primary/10 transition-all duration-300">
+                    <p class="text-sm font-medium text-primary mb-1">2019 - 2021</p>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Higher Secondary Certificate (HSC)
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 mb-3">Dr. Mahbubur Rahman Mollah College, Dhaka</p>
+                    <span
+                        class="inline-block bg-primary/10 text-primary/80 text-sm font-medium px-3 py-1 rounded-full">GPA:
+                        5.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact section is here -->
+    <main class="container mx-auto px-4 py-16 sm:py-24">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+                CONTACT ME
+            </h1>
+            <div class="inline-block w-20 h-1.5 bg-primary rounded-full"></div>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+            </p>
+        </div>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div
+                class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-8 backdrop-blur-sm">
+                <form action="#" class="space-y-6" method="POST">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2" for="name">Name</label>
+                        <input
+                            class="w-full bg-gray-900/50 border border-white/10 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                            id="name" name="name" placeholder="Your Name" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2" for="email">Email</label>
+                        <input
+                            class="w-full bg-gray-900/50 border border-white/10 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                            id="email" name="email" placeholder="your@email.com" type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2" for="message">Message</label>
+                        <textarea
+                            class="w-full bg-gray-900/50 border border-white/10 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                            id="message" name="message" placeholder="Let's build something amazing together..."
+                            rows="5"></textarea>
+                    </div>
+                    <div>
+                        <button
+                            class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg hover:shadow-glow-primary transition-all duration-300"
+                            type="submit">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="flex flex-col justify-between space-y-8">
+                <div
+                    class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-8 backdrop-blur-sm group hover:border-primary/50 transition-all duration-300">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 group-hover:shadow-glow-primary transition-all duration-300">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Email</h3>
+                            <a class="text-gray-400 hover:text-primary transition-colors duration-300"
+                                href="mailto:salmanh.dev@gmail.com">salmanh.dev@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/5 dark:bg-gray-900/40 border border-gray-200/10 dark:border-white/10 rounded-lg shadow-lg p-8 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-6">Let's Connect</h3>
+                    <div class="flex items-center justify-center space-x-6">
+                        <a class="text-gray-400 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(160,32,240,0.7)]"
+                            href="#">
+                            <svg aria-hidden="true" class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(160,32,240,0.7)]"
+                            href="#">
+                            <svg aria-hidden="true" class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
