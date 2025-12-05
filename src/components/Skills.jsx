@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
     const skills = {
@@ -29,40 +30,107 @@ const Skills = () => {
         ],
     };
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
+    };
+
     return (
-        <div id="skills" className="container mx-auto max-w-6xl relative z-10 px-4 py-16 sm:py-24">
-            <div className="text-center mb-12">
+        <div id="skills" className="container mx-auto max-w-6xl relative z-10 px-4 py-16 sm:py-24 overflow-hidden">
+            {/* Floating Background Particles */}
+            <motion.div
+                className="absolute top-20 right-10 w-24 h-24 bg-purple-500/10 rounded-full blur-xl"
+                animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+                className="absolute bottom-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"
+                animate={{ y: [0, -40, 0], x: [0, 30, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            />
+
+            <motion.div
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
                     SKILLS
                 </h2>
                 <div className="mt-2 flex justify-center">
-                    <div className="w-20 h-1 bg-primary rounded-full"></div>
+                    <motion.div
+                        className="w-20 h-1 bg-primary rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 80 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    ></motion.div>
                 </div>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400">
                     A collection of my technical skills and expertise honed through various projects and experiences
                 </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            </motion.div>
+
+            <motion.div
+                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+            >
                 {Object.entries(skills).map(([category, items]) => (
-                    <div key={category}
-                        className="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden">
+                    <motion.div
+                        key={category}
+                        variants={itemVariants}
+                        className="p-8 bg-slate-50/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm relative overflow-hidden group"
+                        whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                    >
                         <div
-                            className="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            className="absolute -inset-px rounded-lg bg-gradient-to-r from-purple-500/30 to-blue-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
-                        <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-6">{category}</h3>
-                        <div className="flex flex-wrap gap-4">
+                        <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-6 relative z-10">{category}</h3>
+                        <div className="flex flex-wrap gap-4 relative z-10">
                             {items.map((skill) => (
-                                <div key={skill.name}
-                                    className="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300">
-                                    <img alt={`${skill.name} icon`} className={`w-5 h-5 ${skill.invert ? 'invert dark:invert-0' : ''}`}
-                                        src={skill.icon} />
+                                <motion.div
+                                    key={skill.name}
+                                    className="flex items-center gap-2 py-2 px-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 cursor-default"
+                                    whileHover={{ scale: 1.05, borderColor: "#3b82f6" }}
+                                >
+                                    <motion.img
+                                        alt={`${skill.name} icon`}
+                                        className={`w-5 h-5 ${skill.invert ? 'invert dark:invert-0' : ''}`}
+                                        src={skill.icon}
+                                        animate={{ y: [0, -3, 0] }}
+                                        transition={{
+                                            duration: 1.5,
+                                            repeat: Infinity,
+                                            ease: "easeInOut",
+                                            delay: Math.random() * 1 // Random delay for natural feel
+                                        }}
+                                    />
                                     <span>{skill.name}</span>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 };
